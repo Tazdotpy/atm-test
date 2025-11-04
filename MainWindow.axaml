@@ -1,0 +1,32 @@
+<Window x:Class="ATM_Avalonia.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="400" Height="500"
+        Title="Banco Emprende">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <!-- Login Section -->
+        <TextBlock Text="Card Number:"/>
+        <TextBox x:Name="txtCardNumber"/>
+
+        <TextBlock Text="PIN:"/>
+        <TextBox x:Name="txtPin" PasswordChar="*"/>
+
+        <Button x:Name="btnLogin" Content="Login" Click="btnLogin_Click"/>
+
+        <!-- Menu Section -->
+        <StackPanel x:Name="panelMenu" IsVisible="False" Spacing="10">
+            <TextBlock x:Name="lblWelcome" FontWeight="Bold"/>
+            <TextBlock x:Name="lblBalance" />
+
+            <TextBox x:Name="txtWithdrawAmount" Watermark="Enter withdrawal amount"/>
+            <Button x:Name="btnWithdraw" Content="Withdraw" Click="btnWithdraw_Click"/>
+            <Button x:Name="btnCheckBalance" Content="Check Balance" Click="btnCheckBalance_Click"/>
+            <Button x:Name="btnShowTransactions" Content="Show Last 5 Transactions" Click="btnShowTransactions_Click"/>
+            <Button x:Name="btnLogout" Content="Logout" Click="btnLogout_Click"/>
+
+            <ListBox x:Name="listTransactions" Height="150"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
