@@ -37,7 +37,7 @@
 
 
         
-        <!-- moved fast-cash buttons inside the root StackPanel -->
+        <!-- fast cash buttons -->
         <TextBlock Text="Quick withdrawal" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
