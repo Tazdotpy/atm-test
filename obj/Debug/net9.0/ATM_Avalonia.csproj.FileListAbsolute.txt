@@ -71,3 +71,6 @@
 /home/kfrg/Desktop/atm/ATM_Avalonia/obj/Debug/net9.0/ATM_Avalonia.pdb
 /home/kfrg/Desktop/atm/ATM_Avalonia/obj/Debug/net9.0/ATM_Avalonia.genruntimeconfig.cache
 /home/kfrg/Desktop/atm/ATM_Avalonia/obj/Debug/net9.0/ref/ATM_Avalonia.dll
+/home/kfrg/Desktop/atm/ATM_Avalonia/obj/Debug/net9.0/ATM_Avalonia.sourcelink.json
+/home/kfrg/Desktop/atm/ATM_Avalonia/bin/Debug/net9.0/DialogHost.Avalonia.dll
+/home/kfrg/Desktop/atm/ATM_Avalonia/bin/Debug/net9.0/MsBox.Avalonia.dll

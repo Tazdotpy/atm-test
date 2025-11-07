@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "96sXN4aMKDA=",
+  "dgSpecHash": "GyxKHNOyW6g=",
   "success": true,
   "projectFilePath": "/home/kfrg/Desktop/atm/ATM_Avalonia/ATM_Avalonia.csproj",
   "expectedPackageFiles": [
@@ -19,11 +19,13 @@
     "/home/kfrg/.nuget/packages/avalonia.themes.simple/11.3.8/avalonia.themes.simple.11.3.8.nupkg.sha512",
     "/home/kfrg/.nuget/packages/avalonia.win32/11.3.8/avalonia.win32.11.3.8.nupkg.sha512",
     "/home/kfrg/.nuget/packages/avalonia.x11/11.3.8/avalonia.x11.11.3.8.nupkg.sha512",
+    "/home/kfrg/.nuget/packages/dialoghost.avalonia/0.8.1/dialoghost.avalonia.0.8.1.nupkg.sha512",
     "/home/kfrg/.nuget/packages/harfbuzzsharp/8.3.1.1/harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "/home/kfrg/.nuget/packages/harfbuzzsharp.nativeassets.linux/8.3.1.1/harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
     "/home/kfrg/.nuget/packages/harfbuzzsharp.nativeassets.macos/8.3.1.1/harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",
     "/home/kfrg/.nuget/packages/harfbuzzsharp.nativeassets.webassembly/8.3.1.1/harfbuzzsharp.nativeassets.webassembly.8.3.1.1.nupkg.sha512",
     "/home/kfrg/.nuget/packages/harfbuzzsharp.nativeassets.win32/8.3.1.1/harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
+    "/home/kfrg/.nuget/packages/messagebox.avalonia/3.3.0/messagebox.avalonia.3.3.0.nupkg.sha512",
     "/home/kfrg/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
     "/home/kfrg/.nuget/packages/skiasharp/2.88.9/skiasharp.2.88.9.nupkg.sha512",
     "/home/kfrg/.nuget/packages/skiasharp.nativeassets.linux/2.88.9/skiasharp.nativeassets.linux.2.88.9.nupkg.sha512",

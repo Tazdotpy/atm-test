@@ -63,6 +63,10 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.3.8, )"
+            },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           },
           "imports": [

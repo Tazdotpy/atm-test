@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Input;
 
 namespace ATM_Avalonia
 {
@@ -48,15 +49,60 @@ namespace ATM_Avalonia
         public MainWindow()
         {
             InitializeComponent();
+            btnFast100.Click += (_, __) => FastCash(100);
+            btnFast500.Click += (_, __) => FastCash(500);
+            btnFast1000.Click += (_, __) => FastCash(1000);
+            btnFast2000.Click += (_, __) => FastCash(2000);
+
+            
+
+
+
 
             accounts = new List<Account>
             {
-                new Account("12345678", "1234", 2500m),
-                new Account("87654321", "5678", 1200m)
+                new Account("12345678", "1234", 10000m),
+                new Account("87654321", "5678", 12000m)
             };
+
+            
+
+            
+        }
+    
+
+        private void FastCash(decimal amount) // fast cash that will be outside the event handler because i am literally terrified about having to deal with an error agan
+        {
+            if (currentAccount == null)
+            {
+                MessageBox("Please log in first.");
+                return;
+            }
+
+            if (amount > currentAccount.Balance)
+            {
+                MessageBox("Insufficient funds.");
+                return;
+            }
+
+            if (currentAccount.DailyTransactions >= 10)
+            {
+                MessageBox("Daily transaction limit reached.");
+                return;
+            }
+
+            currentAccount.Balance -= amount;
+            currentAccount.Transactions.Add(new Transaction("Fast Cash Withdraw", amount, DateTime.Now));
+            currentAccount.DailyTransactions++;
+
+            lblBalance.Text = $"Balance: ${currentAccount.Balance}";
+
+            MessageBox($"Fast Cash Withdrawal of ${amount} successful!\nNew Balance: ${currentAccount.Balance}");
         }
 
         // event handlers
+
+        
         private void btnLogin_Click(object? sender, RoutedEventArgs e)
         {
             string card = txtCardNumber.Text ?? "";
@@ -119,6 +165,43 @@ namespace ATM_Avalonia
             MessageBox($"Withdrawal successful!\nNew Balance: ${currentAccount.Balance}");
         }
 
+        // event handler for deposit 
+        private void btnDeposit_Click(object? sender, RoutedEventArgs e)
+        {
+            if (currentAccount == null)
+            {
+                MessageBox("Please log in first.");
+                return;
+            }
+
+            if (!decimal.TryParse(txtDepositAmount.Text, out decimal amount))
+            {
+                MessageBox("Please enter a valid number.");
+                return;
+            }
+
+            if (amount <= 0 || amount > 10000)
+            {
+                MessageBox("Please enter an amount between $0.01 and $10,000.");
+                return;
+            }
+
+            if (currentAccount.DailyTransactions >= 10)
+            {
+                MessageBox("Daily transaction limit reached.");
+                return;
+            }
+
+            currentAccount.Balance += amount;
+            currentAccount.Transactions.Add(new Transaction("Deposit", amount, DateTime.Now));
+            currentAccount.DailyTransactions++;
+
+            lblBalance.Text = $"Balance: ${currentAccount.Balance}";
+            txtDepositAmount.Text = string.Empty;
+
+            MessageBox($"Deposit successful!\nNew Balance: ${currentAccount.Balance}");
+        }
+
         private void btnShowTransactions_Click(object? sender, RoutedEventArgs e)
         {
             listTransactions.ItemsSource = null;
@@ -172,5 +255,7 @@ namespace ATM_Avalonia
 
             await dialog.ShowDialog(this);
         }
+
+        
     }
 }
